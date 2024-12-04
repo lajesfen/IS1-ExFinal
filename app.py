@@ -1,6 +1,8 @@
 from flask import Flask, request, jsonify
+from DataHandler import DataHandler
 
 app = Flask(__name__)
+dataHandler = DataHandler()
 
 @app.route("/mensajeria/contactos", methods=['GET'])
 def get_contactos_by_alias():
